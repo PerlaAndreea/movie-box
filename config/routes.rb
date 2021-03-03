@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :dummy_users
+  resources :users
   get 'users/new'
   root 'static_pages#trending'
   get '/topRated', to: 'static_pages#topRated'
