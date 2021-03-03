@@ -6,13 +6,13 @@
         <div class="add-movie" id="myMovie">
            <a href="/add"><i class="fa fa-plus" aria-hidden="true"></i></a>
         </div>
-        <ul class="nav navbar-nav navbar-left">
-        <li><%= link_to "Trending", root_path %></li>
-        <li><%= link_to "Top Rated", topRated_path %></li>
-        <li><%= link_to "New Arrivals", newArrivals_path %></li>
-      </ul>
+       <div class="nav navbar-nav navbar-left">
+        <a <%= link_to "Trending", root_path %> </a>
+        <a <%= link_to "Top Rated", topRated_path %> </a>
+        <a <%= link_to "New Arrivals", newArrivals_path %> </a>
+      </div>
         <div class="search-container">
-            <form action="/action_page.php">
+            <form action="#">
                 <input type="text" placeholder="Search..." name="search">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
