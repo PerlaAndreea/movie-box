@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
   resources :dummy_users
   resources :users
   get 'users/new'
@@ -10,5 +11,8 @@ Rails.application.routes.draw do
   get '/about', to: 'static_pages#about'
   get '/add', to: "static_pages#add"
   get '/signup', to: 'users#new'
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
   resources :users
 end

@@ -4,8 +4,22 @@
         <div class="bottom-left">Watch movies now!</div>
         <div class="top-left">the movie box</div>
         <div class="top-right">
-          <a href="/#">Log in</a>
-          <a <%= link_to "Sign up", signup_path %></a>
+          <ul class="nav navbar-nav navbar-right">
+              
+         
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Help", help_path %></li>
+            <% if logged_in? %>
+                  <li><%= link_to "Users", "#" %></li>
+                  <li><%= link_to "Profile", current_user %></li>
+                  <li><%= link_to "Settings", "#" %></li>
+                  <li class="divider"></li>
+                  <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+            <% else %>
+              <li><%= link_to "Log in", login_path %></li>
+               <li> <%= link_to "Sign up", signup_path %></li>
+            <% end %>
+          </ul>
         </div>
         </div>
 </div>
